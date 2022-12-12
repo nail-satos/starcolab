@@ -396,7 +396,7 @@ def view_activity():
 
 
     # ### メニューからアクティビティを特定する処理 ###
-    if chapter_name != '新規追加':
+    if chapter_name != '追加登録':
 
         # JSONファイルを辞書型で読み込む
         json_file = open('./datasets/generic/activitys.json', 'r', encoding="utf-8")
