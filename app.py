@@ -391,7 +391,7 @@ def view_activity():
                             conn.commit()
 
             else:
-                message = 'キーワード「' + keyword + '」' + const.MASSAGE_113
+                message = 'キーワード「' + keyword + '」は存在しません。アクティビティの手順書を、確認してください。'
                 ph_201.write(message)
 
 
