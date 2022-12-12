@@ -329,6 +329,8 @@ def view_activity():
 
     if chapter_name == '追加登録':
 
+        st.session_state['activity_steps'] = 0
+
         ph_001.header('Python 演習環境 "STAR Colab" へ ようこそ')
 
         # フォームのレイアウト
@@ -450,54 +452,6 @@ def view_activity():
             # ret_help_button = col[0].button('最初に戻す')
             ret_exec_button = col[1].button('プログラムの実行')
 
-            # # 実行ボタン
-            # if ret_exec_button == False:
-            #     st.session_state['activity_state'] = 'before'
-            # else:
-            #     st.session_state['activity_state'] = 'success'
-
-            # # インフォメーションエリア
-            # st.info(step_dict[st.session_state['activity_state']][0]['info'])
-
-        # if ret_help_button:
-
-        #     pass
-
-            # st.write('個人用データベースを削除しました')
-
-            # # データベースの接続（個人用）
-            # db_name = './database/' + st.session_state['user_id'] + '.db'
-            # conn = sqlite3.connect(db_name)
-            # csor = conn.cursor()
-
-            # # デバッグ用
-            # try:
-            #     csor.execute('DROP TABLE activitys')
-            # except:
-            #     pass
-
-            # # データベースを切断
-            # conn.close()
-
-            # st.stop()
-
-
-        ### メインエリアのレイアウト ###
-
-        # プレースホルダの設定
-        # pha_101 = st.empty()
-        # pha_201 = st.empty()
-        # pha_301 = st.empty()
-        # pha_401 = st.empty()
-        # pha_501 = st.empty()
-
-        # プログラミングエリア
-        # txt_input = pha_101.text_area('プログラミングエリア', value=step_dict['code'] ,max_chars=500, height=1)
-
-        # pha_201 = st.expander("お手本を見る")
-        # pha_201.code(step_dict['hint'])
-
-        # pha_301.markdown('実行結果エリア')
 
         txt_input = st.text_area('プログラミングエリア', value=step_dict['code'] ,max_chars=500, height=step_dict['height'])
 
